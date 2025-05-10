@@ -1,0 +1,169 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #FFFFFF;
+  --gray: #BCC3D7;
+  --background: #04213D;
+  --gradient: linear-gradient(135deg, #55E2A9, #00E5FF);
+  --dark: #0A1A2B;
+  --border: linear-gradient(90deg, #55E2A9, #47C7AD, #2384B9, #04213D);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary: #FFFFFF;
+    --gray: #BCC3D7;
+    --background: #04213D;
+    --gradient: linear-gradient(135deg, #55E2A9, #00E5FF);
+  }
+}
+
+body {
+  color: var(--primary);
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--background);
+}
+
+.bg-primary {
+  background-color: var(--background);
+}
+
+.bg-dark-theme {
+  background-color: var(--dark);
+}
+
+
+.theme-grad {
+  background-image: var(--gradient);
+  color: transparent;
+  background-clip: text;
+}
+
+.bg-grad {
+  background-image: var(--gradient);
+}
+
+.bg-border {
+  background-image: var(--border);
+}
+
+.main-heading {
+  font-size: 4rem;
+  font-weight: 400;
+  line-height: 4rem;
+}
+
+.heading {
+  font-size: 3rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.heading-2 {
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 3rem;
+}
+
+.sub-heading {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.text-normal {
+  font-size: 1.3rem;
+  color: var(--gray)
+}
+
+.text-small {
+  font-size: 1rem;
+  color: var(--gray);
+}
+
+.techno-btn {
+  padding: 12px 24px;
+  background-image: var(--gradient);
+  color: var(--background);
+  font-weight: 600;
+  border-radius: .5rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.form-input {
+  background-color: var(--background);
+  padding: 1rem 2rem;
+  color: var(--gray);
+  display: flex;
+  border-radius: .5rem;
+  width: 100%;
+}
+
+.subs-btn {
+  background-color: var(--primary);
+  color: var(--background);
+  padding: 1rem 2rem;
+  text-align: center;
+  border-radius: .5rem;
+  width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+
+  .main-heading {
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 2rem;
+  }
+
+  .heading {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    line-height: 2rem;
+  }
+
+  .heading-2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.5rem;
+  }
+
+  .sub-heading {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  .text-normal {
+    font-size: 1rem;
+    color: var(--gray)
+  }
+
+  .text-small {
+    font-size: .8rem;
+    color: var(--gray);
+  }
+
+  .techno-btn {
+    padding: 12px 24px;
+    background-image: var(--gradient);
+    color: var(--background);
+    font-weight: 600;
+    border-radius: .5rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+  }
+}

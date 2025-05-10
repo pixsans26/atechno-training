@@ -1,0 +1,39 @@
+{
+  "name": "atechno-website",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@t3-oss/env-nextjs": "^0.11.1",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "framer-motion": "^11.18.1",
+    "lucide-react": "^0.462.0",
+    "next": "15.0.3",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-fast-marquee": "^1.6.5",
+    "react-icons": "^5.3.0",
+    "sweetalert2": "^11.10.8",
+    "swiper": "^11.2.1",
+    "tailwind-merge": "^2.5.5",
+    "tailwindcss-animate": "^1.0.7",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@svgr/webpack": "^8.1.0",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "15.0.3",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5"
+  }
+}
