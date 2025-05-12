@@ -2,24 +2,27 @@
 // import Subscribe from "@/components/subscribe";
 import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa";
-
-
+import type { Metadata } from "next";
+// export const metadata: Metadata = {
+//     title: "Portfolio: Pixsans - Best Graphics Designer's Team in India",
+//     description: "Explore our portfolio of innovative designs, branding, web & app development, motion graphics, and creative projects. See how Pixsans brings ideas to life!",
+//     keywords: "portfolio, previous works, our work, creative projects, design showcase, branding portfolio, UI UX portfolio, web development projects, app development showcase, motion graphics portfolio, video editing samples, graphic design work, case studies, project gallery, client work, design case studies, past projects, creative agency work, Pixsans portfolio, visual storytelling, featured projects, website design samples, app UI showcase, animation work, digital branding showcase, successful projects"
+// };
 
 export default async function Home() {
 
-
   return (
     <>
-      <section className="w-full mx-auto lg:py-36 py-28 relative">
+      <section className="w-full mx-auto lg:py-28 py-28 relative">
         <img className="absolute w-3/12 left-0 top-0" src="/images/blur-left.svg" width={100} height={100} alt="pcbui" />
         <img className="absolute w-3/12 right-0" src="/images/blur-right.svg" width={100} height={100} alt="pcbui" />
         <div className="lg:w-10/12 w-11/12 mx-auto">
-          <div className="lg:w-8/12 w-11/12 mx-auto ">
+          <div className="lg:w-10/12 w-11/12 mx-auto mb-5">
             <h1 className="main-heading text-center align-middle mb-4">Your Trusted Partner in <span className="font-bold theme-grad">Education & Skill Development for Employability</span></h1>
             <p className="text-normal lg:w-8/12 w-10/12 mx-auto text-center">Your Trusted Partner in Building a Job-Ready Future</p>
           </div>
           <div className="lg:w-8/12 w-full  mx-auto">
-            <img className="w-full" src="/images/pcbui.svg" width={500} height={500} alt="pcbui" />
+            <img className="w-full" src="/images/main-banner.svg" width={500} height={500} alt="pcbui" />
           </div>
         </div>
       </section>
@@ -29,7 +32,7 @@ export default async function Home() {
       <section className="w-full bg-gradient-to-r from-[#171a217f] bg-opacity-30 to-[#171a2114] lg:py-28 py-10 lg:mb-32 mb-16">
         <div className="lg:w-10/12 w-11/12 mx-auto flex lg:flex-row flex-col justify-between gap-10 lg:mb-10 mb-5">
           <div className="lg:order-first order-last lg:w-5/12 w-full">
-            <div className="bg-gradient-to-tl from-[#1b2834] to-[#252e40]  rounded-xl">
+            <div className="bg-gradient-to-tl from-[#1b2834] to-[#252e40] overflow-hidden rounded-xl">
               <img src="/images/skilldev.jpg" width={1000} height={1000} alt="image" />
             </div>
             <div className="hidden py-5">

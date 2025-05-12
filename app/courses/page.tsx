@@ -23,7 +23,7 @@ export default async function About() {
             <section className="lg:w-10/12 w-11/12 mx-auto lg:mb-20 mb-5">
                 <div className="w-full lg:w-8/12 mx-auto mb-10 text-center">
                     <span className="theme-grad font-semibold">Our Courses</span>
-                    <h2 className="heading-2 lg:mb-10 mb-5">Our Courses</h2>
+                    <h2 className="heading-2 lg:mb-10 mb-5">Training Modules</h2>
                 </div>
                 <div className="lg:w-10/12 w-11/12 grid lg:grid-cols-3 grid-cols-1 mx-auto gap-16">
 
@@ -31,8 +31,8 @@ export default async function About() {
 
                         <div className="bg-border p-[2px] rounded-2xl" key={curElm.id}>
                             <div className='w-full h-full relative justify-start bg-primary rounded-2xl p-6'>
-                                <div className='w-full bg-dark-theme h-60 rounded-md mb-5 flex justify-center items-center'>
-                                    <img src={`${baseUrl}/assets/${curElm.image}`} alt={curElm.course_name} className="h-60 w-full rounded-lg" />
+                                <div className='w-full bg-dark-theme h-60 overflow-hidden rounded-md mb-5 flex justify-center items-center'>
+                                    <img src={`${baseUrl}/assets/${curElm.image}`} alt={curElm.course_name} className="h-60 w-full object-cover rounded-lg" />
                                 </div>
                                 <div className='w-full justify-start'>
                                     <h3 className="text-2xl font-bold mb-1">{curElm.course_name}</h3>

@@ -43,7 +43,7 @@ const NavbarMobile = () => {
                             About
                         </Link>
                         <Link
-                            href="/products"
+                            href="/courses"
                             onClick={() => setSidebarOpen(false)}
                             className="block px-4 py-2 rounded hover:bg-gray-700 transition"
                         >

@@ -94,7 +94,7 @@ export default function About() {
                             </div>
                             <div className='w-full justify-start'>
                                 <h3 className="text-2xl font-bold mb-1">Dr. Pallavi Mulmule </h3>
-                                <h4 className="text-lg font-bold mb-1">Freelancer and Trainer in Space of AI, ML, Data Analytics, Data Science </h4>
+                                <h4 className="text-lg font-bold mb-1">Training consultant</h4>
                                 <p className="text-small">
                                     Dr. Pallavi Mulmule holds a Ph.D. degree specializing in Medical Image Processing leveraging artificial intelligence techniques in healthcare. Diverse experience across applied research and freelance consulting. Expertise in machine learning, deep learning, large language models and data analytics, with a strong track record of delivering impactful AI-driven projects.
                                 </p>
@@ -109,8 +109,8 @@ export default function About() {
                                 <img src="/images/team/sir.jpeg" alt='img team' className="h-full w-auto" />
                             </div>
                             <div className='w-full justify-start'>
-                                <h3 className="text-2xl font-bold mb-1">Name</h3>
-                                <h4 className="text-lg font-bold mb-1">Designation </h4>
+                                <h3 className="text-2xl font-bold mb-1">Mr. Sangameshwar Kendre</h3>
+                                <h4 className="text-lg font-bold mb-1">Training consultant</h4>
                                 <p className="text-small">
                                     Accomplished technical consultant and academic with 20+ years of
                                     expertise in Embedded Systems, IoT, and Digital Electronics. Known for
