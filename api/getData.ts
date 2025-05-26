@@ -34,3 +34,19 @@ export async function getCourses() {
         console.log(error)
     }
 }
+
+// get courses
+
+export async function getSingleCourses(id: any) {
+
+
+    try {
+        const res = await fetch(`${baseUrl}/items/courses/${id}?&fields=*.*`, { next: { revalidate: 30 } });
+        const response = await res.json();
+        // console.log(response)
+        return response
+
+    } catch (error) {
+        console.log(error)
+    }
+}
