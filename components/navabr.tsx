@@ -4,7 +4,7 @@ import React from 'react'
 
 const Navabr = () => {
     return (
-        <header className="w-full mx-auto hidden py-4 sticky top-0 z-50 lg:flex bg-gray-900 bg-opacity-50 backdrop-blur-sm">
+        <header className="w-full mx-auto hidden py-4 sticky top-0 z-40 lg:flex bg-gray-900 bg-opacity-50 backdrop-blur-sm">
             <nav className="w-10/12 flex justify-between items-center gap-10 mx-auto">
                 <div className="w-3/12 flex justify-start items-center ">
                     <img src='/logo.svg' height={1000} width={1000} alt='logo' className='w-8/12' />

@@ -4,6 +4,9 @@ import "./globals.css";
 import Navabr from "@/components/navabr";
 import Footer from "@/components/footer";
 import NavbarMobile from "@/components/navMobile";
+import Whatsapp from "@/components/widgets/Whatsapp";
+import PopupModal from "@/components/WelcomePopup";
+import { getPopup } from "@/api/getData";
 
 // Import Swiper styles
 import 'swiper/css';
@@ -29,19 +32,22 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const { data: popupData } = await getPopup();
   return (
     <html lang="en" suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <PopupModal popup={popupData} />
         <Navabr />
         <NavbarMobile />
         {children}
         <Footer />
+        <Whatsapp />
       </body>
     </html>
   );

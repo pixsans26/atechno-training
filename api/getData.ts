@@ -50,3 +50,19 @@ export async function getSingleCourses(id: any) {
         console.log(error)
     }
 }
+
+// get Popup
+
+export async function getPopup() {
+
+
+    try {
+        const res = await fetch(`${baseUrl}/items/popup?filter[status]=published`, { next: { revalidate: 10 } });
+        const response = await res.json();
+        // console.log(response)
+        return response
+
+    } catch (error) {
+        console.log(error)
+    }
+}

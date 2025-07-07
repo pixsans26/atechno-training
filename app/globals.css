@@ -167,3 +167,21 @@ body {
     --radius: 0.5rem;
   }
 }
+
+/* styles/globals.css or app/globals.css */
+
+@keyframes swipeUp {
+  0% {
+    transform: translateY(80px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-swipe-up {
+  animation: swipeUp 1s ease-out forwards;
+}
