@@ -19,7 +19,7 @@ interface PopupModalProps {
     popup: Popup;
 }
 
-const TEN_MINUTES = 1 * 60 * 1000;
+const TEN_MINUTES = 10 * 60 * 1000;
 
 
 const PopupModal: React.FC<PopupModalProps> = ({ popup }) => {
@@ -27,14 +27,25 @@ const PopupModal: React.FC<PopupModalProps> = ({ popup }) => {
     const [showPopup, setShowPopup] = useState(false);
 
     useEffect(() => {
+        if (popup?.status !== 'published') {
+            document.body.style.overflow = 'auto'; // make sure scroll stays enabled
+            return;
+        }
+
         const lastShown = Cookies.get('popupLastShown');
         const now = Date.now();
 
         if (!lastShown || now - parseInt(lastShown) > TEN_MINUTES) {
             setShowPopup(true);
-            document.body.style.overflow = 'hidden'; // prevent scrolling
+            document.body.style.overflow = 'hidden'; // disable scroll when popup shows
+        } else {
+            document.body.style.overflow = 'auto';
         }
-    }, []);
+
+        return () => {
+            document.body.style.overflow = 'auto'; // cleanup on unmount
+        };
+    }, [popup?.status]);
 
     const handleClose = () => {
         Cookies.set('popupLastShown', Date.now().toString(), { expires: 1 });
@@ -42,35 +53,38 @@ const PopupModal: React.FC<PopupModalProps> = ({ popup }) => {
         document.body.style.overflow = 'auto';
     };
 
+    // Disable everything if status is not "published"
+    if (popup?.status !== 'published') return null;
+
     if (!showPopup) return null;
 
     return (
         <>
-            {popup?.status === 'published' && (
-                <section>
 
-                    {/* BACKDROP blocks everything including navbar */}
-                    <div className="fixed inset-0 z-50 bg-black bg-opacity-70"></div>
+            <section>
 
-                    {/* MODAL CONTENT */}
+                {/* BACKDROP blocks everything including navbar */}
+                <div className="fixed inset-0 z-50 bg-black bg-opacity-70"></div>
 
-                    <div className="fixed inset-0 z-50 flex items-center justify-center w-full">
-                        <div className="bg-white p-4 rounded-2xl shadow-md w-auto text-center animate-swipe-up">
-                            <div className='mb-5 h-70 w-[40rem]'>
-                                <Image width="1000" height="100" alt="popup-img" src={`${baseUrl}/assets/${popup?.image}`} className='rounded-xl' />
-                            </div>
-                            <button
-                                onClick={handleClose}
-                                className="bg-teal-400 text-white px-4 py-2 rounded hover:bg-teal-700 transition ease-in-out"
-                            >
-                                Close
-                            </button>
+                {/* MODAL CONTENT */}
+
+                <div className="fixed inset-0 z-50 flex items-center justify-center w-full">
+                    <div className="bg-white lg:p-4 p-2 rounded-2xl shadow-md w-auto text-center animate-swipe-up">
+                        <div className='mb-5 h-70 lg:w-[40rem]'>
+                            <Image width="1000" height="100" alt="popup-img" src={`${baseUrl}/assets/${popup?.image}`} className='rounded-xl' />
                         </div>
+                        <button
+                            onClick={handleClose}
+                            className="bg-teal-400 text-white px-4 py-2 rounded hover:bg-teal-700 transition ease-in-out"
+                        >
+                            Close
+                        </button>
                     </div>
+                </div>
 
 
-                </section>
-            )}
+            </section>
+
 
         </>
 

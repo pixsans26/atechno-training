@@ -5,6 +5,8 @@ import Link from "next/link";
 
 const baseUrl = env.NEXT_PUBLIC_API_URL
 
+
+
 export default async function SingleCourse({ params }: any) {
     const { data: course } = await getSingleCourses(params.id)
     const Details = course.details
@@ -12,9 +14,9 @@ export default async function SingleCourse({ params }: any) {
 
     return (
         <>
-            <section className="w-full h-[28rem] bg-white relative overflow-hidden">
-                <section className="w-full ">
-                    <Image className="w-full object-cover" height={100} width={1000} alt="bg" src={`${baseUrl}/assets/${course.background.id}`} />
+            <section className="w-full lg:h-[28rem] h-[18rem] bg-white relative overflow-hidden">
+                <section className="w-full lg:flex hidden">
+                    <Image className="w-full obejct-cover absolute bottom-0" height={1000} width={10000} alt="bg" src={`${baseUrl}/assets/${course.background.id}`} />
                 </section>
                 <section className="w-full absolute top-0">
                     <div className="lg:w-10/12 w-11/12 lg:py-5 mx-auto py-2 ">
@@ -35,13 +37,13 @@ export default async function SingleCourse({ params }: any) {
                 <section className="lg:w-10/12 w-11/12 lg:flex justify-between mx-auto gap-5 items-center relative ">
 
                     {/* card */}
-                    <div className="lg:w-4/12 w-full mx-auto top-[-20rem] right-0 items-center bg-dark-theme rounded-2xl lg:h-auto h-auto order-first lg:order-last mb-5 absolute shadow-lg" >
+                    <div className="lg:w-4/12 w-full mx-auto top-[-20rem] right-0 items-center bg-dark-theme rounded-2xl lg:h-auto h-auto order-first lg:order-last mb-5 lg:absolute shadow-lg" >
                         <div className="rounded-2xl overflow-hidden bg-white">
                             <div className='w-full h-full relative justify-start '>
-                                <div className='w-full bg-dark-theme h-60 overflow-hidden flex justify-center items-center'>
-                                    <img src={`${baseUrl}/assets/${course.image.id}`} alt={course.course_name} className="h-60 w-full object-cover" />
+                                <div className='w-full bg-dark-theme lg:h-60 overflow-hidden flex justify-center items-center'>
+                                    <img src={`${baseUrl}/assets/${course.image.id}`} alt={course.course_name} className="lg:h-60 w-full object-cover" />
                                 </div>
-                                <div className='w-full justify-start px-12 py-4'>
+                                <div className='w-full justify-start lg:px-12 px-4 py-4'>
                                     {/* button */}
                                     <div className="w-full flex justify-between py-8">
                                         <Link href={'/'} className="bg-teal-500 w-full h-16 flex justify-center items-center rounded-md font-semibold text-xl">Enroll Now</Link>

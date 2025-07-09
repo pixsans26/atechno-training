@@ -38,27 +38,27 @@ export default function About() {
             <section className="lg:w-10/12 w-11/12 mx-auto relative lg:mb-32 mb-20">
                 <img className="w-full h-auto hidden lg:flex" src="/images/borderlg.svg" width={1000} height={100} alt="bg" />
                 <div className="lg:w-full lg:absolute top-24 left-10 lg:flex flex-col justify-between gap-20">
-                    <div className="lg:w-5/12 w-full flex flex-col justify-center">
+                    <div className="lg:w-5/12 w-full flex flex-col justify-start">
 
                         <h2 className="heading-2 lg:mb-10 mb-5">Our training modules cover a wide spectrum of key areas, including:</h2>
-                        <div className="grid lg:grid-cols-2 grid-cols-1">
-                            <div className="w-full flex items-center mb-5 p-5 text-normal">
+                        <div className="grid grid-cols-2 mb-5 justify-start">
+                            <div className="w-full flex items-center justify-start mb-5 lg:p-5 lg:text-xl">
                                 <img src="/icons/check.svg" className="h-10" width={100} height={100} alt="icons" />
                                 <p className="font-bold theme-grad">Technical Skills</p>
                             </div>
-                            <div className="w-full flex items-center mb-5 p-5 text-normal">
+                            <div className="w-full flex items-center justify-start  mb-5 lg:p-5 lg:text-xl">
                                 <img src="/icons/check.svg" className="h-10" width={100} height={100} alt="icons" />
                                 <p className="font-bold theme-grad">Digital Literacy</p>
                             </div>
-                            <div className="w-full flex items-center mb-5 p-5 text-normal">
+                            <div className="w-full flex items-center justify-start mb-5 lg:p-5 lg:text-xl">
                                 <img src="/icons/check.svg" className="h-10" width={100} height={100} alt="icons" />
                                 <p className="font-bold theme-grad">Industrial Training</p>
                             </div>
-                            <div className="w-full flex items-center mb-5 p-5 text-normal">
+                            <div className="w-full flex items-center justify-start mb-5 lg:p-5 lg:text-xl">
                                 <img src="/icons/check.svg" className="h-10" width={100} height={100} alt="icons" />
                                 <p className="font-bold theme-grad">Entrepreneurship</p>
                             </div>
-                            <div className="w-full flex items-center mb-5 p-5 text-normal">
+                            <div className="w-full flex items-center mb-5 lg:p-5 lg:text-xl">
                                 <img src="/icons/check.svg" className="h-10" width={100} height={100} alt="icons" />
                                 <p className="font-bold theme-grad">Soft Skills</p>
                             </div>
@@ -78,7 +78,7 @@ export default function About() {
             </section>
 
             {/* Teams */}
-            <section className="lg:w-10/12 w-11/12 mx-auto lg:mb-20 mb-5">
+            <section className="lg:w-10/12 w-11/12 mx-auto mb-20">
                 <div className="w-full lg:w-8/12 mx-auto mb-10 text-center">
                     <span className="theme-grad font-semibold">Rainbow Team Member</span>
                     <h2 className="heading-2 lg:mb-10 mb-5">The Experts</h2>
@@ -138,32 +138,32 @@ export default function About() {
                 <div className="lg:w-10/12 w-11/12 mx-auto lg:flex justify-between gap-5">
 
                     <div className="lg:w-4/12 w-full flex flex-col gap-4 mb-5">
-                        <div className='w-full bg-[#0A1A2B] p-10 rounded-2xl flex items-center justify-between gap-4'>
+                        <div className='w-full bg-[#0A1A2B] lg:p-10 p-5 rounded-2xl flex items-center justify-between gap-4'>
                             <div className='w-3/12 flex justify-center items-center'>
                                 <img src='/icons/Location 1.svg' width={100} height={100} alt='location' className='w-8/12' />
                             </div>
                             <div className="w-9/12">
-                                <h4 className='font-bold text-2xl mb-2'>Location</h4>
-                                <p className='text-xl text-slate-400'>Ph-I, Bldg-A-9, Fl-103, SN-17, Shivsagar City Ph-I, Wadgaon BK, Pune-411041, Maharashtra, India</p>
+                                <h4 className='font-bold lg:text-2xl mb-2'>Location</h4>
+                                <p className='lg:text-xl text-slate-400'>Ph-I, Bldg-A-9, Fl-103, SN-17, Shivsagar City Ph-I, Wadgaon BK, Pune-411041, Maharashtra, India</p>
                             </div>
                         </div>
-                        <div className='w-full bg-[#0A1A2B] p-10 rounded-2xl flex items-center justify-between gap-4'>
+                        <div className='w-full bg-[#0A1A2B] lg:p-10 p-5 rounded-2xl flex items-center justify-between gap-4'>
                             <div className='w-3/12 flex justify-center items-center'>
                                 <img src='/icons/Phone.svg' width={100} height={100} alt='location' className='w-8/12' />
                             </div>
                             <div className="w-9/12">
-                                <h4 className='font-bold text-2xl mb-2'>Mobile</h4>
-                                <p className='text-xl text-slate-400'>+91 9842394728</p>
+                                <h4 className='font-bold lg:text-2xl mb-2'>Mobile</h4>
+                                <p className='lg:text-xl text-slate-400'>+91 9842394728</p>
 
                             </div>
                         </div>
-                        <div className='w-full bg-[#0A1A2B] p-10 rounded-2xl flex items-center justify-between gap-4'>
+                        <div className='w-full bg-[#0A1A2B] lg:p-10 p-5 rounded-2xl flex items-center justify-between gap-4'>
                             <div className='w-3/12 flex justify-center items-center'>
                                 <img src='/icons/Email.svg' width={100} height={100} alt='location' className='w-8/12' />
                             </div>
                             <div className="w-9/12">
-                                <h4 className='font-bold text-2xl mb-2'>Email</h4>
-                                <p className='text-xl text-slate-400'>atechno@gmail.com</p>
+                                <h4 className='font-bold lg:text-2xl mb-2'>Email</h4>
+                                <p className='lg:text-xl text-slate-400'>atechno@gmail.com</p>
 
                             </div>
                         </div>

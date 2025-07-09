@@ -18,7 +18,7 @@ const Footer = () => {
                         <img src='/logo.svg' width={1000} height={100} alt="logo" className='w-8/12' />
                     </div>
                     <div className='mb-10'>
-                        <p className='text-small'>It has long been known that a reader&apos;s attention will be diverted from</p>
+                        <p className='text-small'>Build Skills. Build confidance</p>
                     </div>
                     {/* <div className='lg:grid hidden grid-cols-3 w-full gap-20'>
                         <div className='relative flex justify-center items-center'>
